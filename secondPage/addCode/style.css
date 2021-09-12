@@ -1,5 +1,30 @@
-h1 {
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
     font-family: ronde-b, sans-serif;
     font-style: normal;
     font-weight: 400;
+    color: white;
+
+    background: #1f1f1f;
+}
+
+.main {
+    margin: 0 10%;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+.getPlayerSum > h3 {
+    margin-top: 50%;
+}
+
+.answerBox {
+    margin-top: 20%;
 }
