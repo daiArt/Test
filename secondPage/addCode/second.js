@@ -31,7 +31,9 @@ $(function() {
 
 
 
-    $(".okBox").click(function() {
+    
+
+    $(".inputSumBox > .okBox").click(function() {
 
         const testTarget = document.getElementById('getPlayerSum')
         let playerSum = testTarget.value;

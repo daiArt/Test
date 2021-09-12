@@ -64,7 +64,7 @@ getPlayerSumの装飾 */
     margin-top: 20%;
 }
 
-.inputBox {
+.inputSumBox {
     display: flex;
     margin-top: 10%;
 }
@@ -76,7 +76,7 @@ getPlayerSumの装飾 */
     margin-left: 0px;
 }
 
-.okBox {
+.inputSumBox > .okBox {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,6 +120,10 @@ getPlayerNameにあたる */
     margin-bottom: 80px;
 }
 
+#PN4 {
+    margin-bottom: 0;
+} 
+
 .inputNameBox h4 {
     font-size: 30px;
 }
@@ -130,4 +134,15 @@ getPlayerNameにあたる */
     text-align: center;
     box-sizing: border-box;
     margin-left: 50px;
+}
+
+.getPlayerName > .okBox {
+    width: 50px;
+    height: 22px;
+    border: solid 1px gray;
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
