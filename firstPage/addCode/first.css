@@ -1,0 +1,28 @@
+ body {
+    font-family: ronde-b, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+a {
+    color: #333333;
+    text-decoration: none;
+}
+
+
+
+.nextButton {
+    width: 200px;
+    height: 80px;
+    border-radius: 20px;
+    border: solid 4px dimgray;
+    background-color: red;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nextButton h3 {
+    font-size: 25px;
+}
