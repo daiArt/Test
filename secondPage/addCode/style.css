@@ -9,22 +9,125 @@ body {
     font-style: normal;
     font-weight: 400;
     color: white;
-
-    background: #1f1f1f;
+    display: flex;
+    justify-content: center;
 }
+
+::placeholder {
+    font-family: ronde-b, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+img {
+    width: 100%;
+}
+
+
+.buckButton {
+    width: 60px;
+    left: 20px;
+    bottom: 15px;
+    position: absolute;
+
+}
+
+
+
 
 .main {
-    margin: 0 10%;
+    /* ほぼ背景みたいなもの */
+
+    width: 768px;
+    height: 1024px;
+    /* background: #1F1F1F; */
+    background: gray;
+    padding: 0 15%;
 }
 
-h3 {
+
+
+
+
+/* ステージ2にあたる　プレイヤーの人数を入れてもらうところ
+getPlayerSumの装飾 */
+
+.getPlayerSum {
+    margin-top: 40%;
+}
+
+.getPlayerSum h3 {
     font-size: 40px;
-}
-
-.getPlayerSum > h3 {
-    margin-top: 50%;
 }
 
 .answerBox {
     margin-top: 20%;
+}
+
+.inputBox {
+    display: flex;
+    margin-top: 10%;
+}
+
+#getPlayerSum {
+    width: 150px;
+    height: 20px;
+    text-align: center;
+    margin-left: 0px;
+}
+
+.okBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 22px;
+    color: black;
+    background: white;
+    border: solid 1px gray;
+    border-radius: 3px;
+    margin-left: 30px;
+}
+
+
+
+
+/* ステージ4にあたる　プレイヤーの名前を入力してもらうところ
+getPlayerNameにあたる */
+
+
+.getPlayerName {
+    margin-top: 25%;
+}
+
+.getPlayerName h3 {
+    font-size: 40px;
+}
+
+.getPlayerName > p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.inputNameTextBox {
+    margin-top: 20%;
+}
+
+.inputNameBox {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.inputNameBox h4 {
+    font-size: 30px;
+}
+
+.playerName{
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-left: 50px;
 }

@@ -1,12 +1,22 @@
+ * {
+     margin: 0;
+     padding: 0;
+ }
+ 
  body {
     font-family: ronde-b, sans-serif;
     font-style: normal;
     font-weight: 400;
+    background-color: red;
 }
 
 a {
     color: #333333;
     text-decoration: none;
+}
+
+.main  {
+    background-color: white
 }
 
 

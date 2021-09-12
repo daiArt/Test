@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../secondPage/addCode/style.css">
+    <link rel="stylesheet" href="./secondPage/addCode/style.css">
     <script src="./jQueryBox/jquery-3.5.1.min.js"></script>
-    <script src="./thirdPage/addCode/third.js"></script>
+    <script src="./secondPage/addCode/second.js"></script>
     <title>ユーザー設定</title>
 </head>
 <body>
 
     <div class="main">
 
-        <div class="getPlayerSum">
+        <div class="talkSpace" style="display: none">
+            <h1>会話文を入れる（一文ずつ）JSで話す内容を入れ替える</h1>
+            <p>ようこそ　ヒーローたちよ</p>
+        </div>
+
+        <div class="getPlayerSum" style="display: none">
             
             <h3>Q. 君たちの人数を教えてくれ</h3>
     
@@ -21,10 +26,10 @@
     
                 <h3>A. ○人</h3>
     
-                <div class="inputBox">
+                <div class="inputSumBox">
     
-                    <input type="text" id="hello">
-                    <div class="okBox">GO</div>
+                    <input type="number" placeholder="人数を入力" id="getPlayerSum">
+                    <div class="okBox"><p>決定</p></div>
     
                 </div>
     
@@ -32,6 +37,67 @@
 
         </div>
 
+        <div class="getPlayerName">
+
+            <h3>Q. 君たちの名前を教えてくれ</h3>
+            <p>※ひらがなで入力してください　例: たろう・はなこ</p>
+
+            <div class="inputNameBox">
+
+                <div class="inputNameTextBox">
+
+                    
+                    <div class="inputNameBox" id="0">
+                        
+                        <h4>プレイヤー1</h4>
+                        
+                        <input type="text" placeholder="名前を入力" class="playerName" id="player1">
+
+                    </div>
+
+                    <div class="inputNameBox" id="1">
+
+                        <h4>プレイヤー2</h4>
+
+                        <input type="text" placeholder="名前を入力" class="playerName" id="player2">
+
+                    </div>
+
+                    <div class="inputNameBox" id="2">
+
+                        <h4>プレイヤー3</h4>
+
+                        <input type="text" placeholder="名前を入力" class="playerName" id="player3">
+
+                    </div>
+
+                    <div class="inputNameBox" id="3">
+
+                        <h4>プレイヤー4</h4>
+
+                        <input type="text" placeholder="名前を入力" class="playerName" id="player4">
+
+                    </div>
+
+                    <div class="inputNameBox" id="4">
+
+                        <h4>プレイヤー5</h4>
+
+                        <input type="text" placeholder="名前を入力" class="playerName" id="player5">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="buckButton">
+            <img src="./image/yajirushiShiro.png" alt="前に戻るためのボタン">
+        </div>
+        
     </div>
 
 </body>
