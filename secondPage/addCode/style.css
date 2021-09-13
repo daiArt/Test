@@ -13,6 +13,11 @@ body {
     justify-content: center;
 }
 
+a {
+    color: #333333;
+    text-decoration: none;
+}
+
 ::placeholder {
     font-family: ronde-b, sans-serif;
     font-style: normal;
@@ -24,12 +29,12 @@ img {
 }
 
 
-.buckButton {
+.backButton {
     width: 60px;
     left: 20px;
     bottom: 15px;
     position: absolute;
-
+    background: gray;
 }
 
 
@@ -69,7 +74,6 @@ img {
     margin-top: 8%;
     text-align: right;
     font-size: 20px;
-    display: none;
 }
 
 
@@ -79,7 +83,6 @@ getPlayerSumの装飾 */
 
 .getPlayerSum {
     margin-top: 40%;
-    /* display: none; */
 }
 
 .getPlayerSum h3 {
@@ -180,7 +183,7 @@ getPlayerNameにあたる */
 
 
 .profileCheck {
-    display: block !important;
+    /* display: block; */
 
     margin-top: 15%;
 }

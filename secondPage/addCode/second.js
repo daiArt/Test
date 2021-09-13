@@ -1,17 +1,24 @@
 $(function() {
-
-
+    
+    
     var windowWeight = localStorage.getItem('proNGWindowWidht')
     var windowHeight = localStorage.getItem('proNGWindowHeight')
-
-
+    
+    
     let pageWidht = windowHeight * 0.75;
-
+    
     $(".main").css({
         width: pageWidht,
         height: windowHeight
     })
-
+    
+    $(".backButton").click(function() {
+    
+        $(".getPlayerSum").css({
+            display: 'none'
+        })
+    
+    })
 
 
 
@@ -32,8 +39,8 @@ $(function() {
         display: 'none'
     })
 
-    $(".talkSpace").css({
-        display: "none"
+    $(".backButton").css({
+        display: 'none'
     })
 
     let pageStage = 1;
@@ -58,7 +65,6 @@ $(function() {
             talkWave += 1;
 
             if (talkWave === 1) {
-                console.log(talkWave)
                 $(".talkTarget").html('<h1>' + kaiwa1[talkWave] + '</h1>')
             } else if (talkWave ===2) {
                 $(".talkTarget").html('<h1>' + kaiwa1[talkWave] + '</h1>')
@@ -66,16 +72,15 @@ $(function() {
                     display: 'block'
                 })
             } else if (talkWave === 3) {
-                pageStage += 1;
-                console.log(pageStage)
+                pageStage = 2;
             }
 
             if (pageStage === 2) {
-                console.log(pageStage)
                 $(".talkSpace").css({display: 'none'});
-                $(".getPlayerSum").css({display: 'block'})
+                $(".getPlayerSum").css({
+                    display: 'block'
+                })
             }
-            
 
         })
 
@@ -91,85 +96,104 @@ $(function() {
     $(".inputSumBox > .okBox").click(function() {
 
         let inputTarget = document.getElementById('getPlayerSum')
-        let storage  = inputTarget.value;
-        localStorage.setItem('playerSum' , storage)
-
-        // 一時的に2足している。　次の会話ができたら変える
-
-        pageStage += 2;
-
-        if (pageStage === 4) {
-            
-                    $(".getPlayerSum").css({
-                        display: 'none'
-                    })
-            
-                    $(".getPlayerName").css({
-                        display: 'block'
-                    })
-
-        }
-
-    })
-
-
-
-
-
-    // 名前の取得
-
-    // 最初の設定
-
-    let playerSum = localStorage.getItem('playerSum')
-
-    console.log('現在の人数は' + playerSum)
-
-    if (playerSum < 5) {
-        let storage = 5 - playerSum
-        console.log(storage)
-        for (i = 5; i > playerSum; i--)  {
-            console.log('これから' + i + '個めの入力欄を消去します')
-
-            $("#PN" + i).css({
-                display: 'none'
-            })
-
-            localStorage.setItem('proNGPlayer' + i, 'none')
-
-        }
-    }
-
-    $(".getPlayerName > .okBox").click(function() {
-
-        for (i = 1; i <= playerSum; i ++) {
-            let inputTarget = document.getElementById('player' + i)
-            let strage = inputTarget.value;
-            console.log(i + 'に入力されたのは' + strage)
-
-            localStorage.setItem('player' + i, strage);
-            let test = localStorage.getItem('player' + i)
-            console.log('プレイヤー' + i + test)
-        };
-
-        pageStage += 1;
-        console.log(pageStage)
-
-        $(".getPlayerName").css({
+        let playerSum  = inputTarget.value;
+        
+        
+        localStorage.removeItem('playerSum')
+        
+        localStorage.setItem('playerSum' , playerSum)
+        
+        
+        pageStage = 3;
+        
+        $(".getPlayerSum").css({
             display: 'none'
         })
-
-        $(".profileCheck").css({
+        
+        $(".getPlayerName").css({
             display: 'block'
         })
 
+        $(".backButton").css({display: 'block'})
 
 
+        
+        
+        
+        
+        
+        // 名前の取得
+        
+        // 最初の設定
+        
+        // let playerSum = localStorage.getItem('playerSum')
+        
+        if (playerSum < 5) {
+            for (i = 5; i > playerSum; i--)  {
+                
+                $("#PN" + i).css({
+                    display: 'none'
+                })
+
+                $("#PNO" + i).css({
+                    display: 'none'
+                })
+                
+                localStorage.setItem('proNGPlayer' + i, 'none')
+
+                localStorage.setItem('proNGPlayer' + i, 'none')
+                
+            }
+        }
+        
+        $(".getPlayerName > .okBox").click(function() {
+            
+            for (i = 1; i <= playerSum; i ++) {
+
+                let target = 'player' + i
+
+                let inputTarget = document.getElementById(target)
+                let strage = inputTarget.value;
+                
+                localStorage.setItem(target, strage);
+
+                
+                // ここでprofileCheckの設定をぶち込む
+                $("#player" + i  + " > p").html(strage)
+
+            };
+
+            pageStage = 4;
+            
+            $(".getPlayerName").css({
+                display: 'none'
+            })
+            
+            $(".profileCheck").css({
+                display: 'block'
+            })
+            
+            
+        })
 
     })
+    
+    $(".backButton").click(function() {
+        
+        if (pageStage < 3) {
+            pageStage = 3
+        }
+        
+        if (pageStage === 3) {
+            $(".getPlayerName").css({display: 'none'})
+            $(".getPlayerSum").css({display: 'block'})
+            $(".backButton").css({display: 'none'})
+        } else if(pageStage === 4) {
+            $(".profileCheck").css({display: 'none'})
+            $(".getPlayerName").css({display: 'block'})
+        }
+        pageStage -= 1;
 
-
-
-
-    // プレイヤー名をチェックするとこ
+    })
 
 }) 
