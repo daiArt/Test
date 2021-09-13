@@ -14,21 +14,12 @@ $(function() {
     console.log(testW)
     console.log(testH)
 
+    let pageWidht = windowHeight * 0.75;
 
-    if (windowHeight < 1024) {
+    $(".main").css({
+        width: pageWidht,
+        height: windowHeight
+    })
 
-        let pageWidht = windowHeight * 0.75;
-
-        $(".main").css({
-            width: pageWidht,
-            height: windowHeight
-        })
-
-    } else {
-        $(".main").css({
-            width: '768px',
-            height: '1024px'
-        })
-    }
 
 })

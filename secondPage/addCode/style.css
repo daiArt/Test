@@ -38,14 +38,39 @@ img {
 .main {
     /* ほぼ背景みたいなもの */
 
-    width: 768px;
-    height: 1024px;
     /* background: #1F1F1F; */
     background: gray;
-    padding: 0 15%;
+    padding: 0 100px;
+    box-sizing: border-box;
+    /* text-align: center; */
 }
 
 
+
+/* ステージ1にあたる　プレイヤーに話しかけるシーン */
+/* talkSpaceの装飾 */
+
+
+.talkSpace {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.talkSpace h1 {
+    text-align: center;
+    font-size: 40px;
+    line-height: 100px;;
+}
+
+.talkSpace p {
+    margin-top: 8%;
+    text-align: right;
+    font-size: 20px;
+    display: none;
+}
 
 
 
@@ -54,6 +79,7 @@ getPlayerSumの装飾 */
 
 .getPlayerSum {
     margin-top: 40%;
+    /* display: none; */
 }
 
 .getPlayerSum h3 {
@@ -120,7 +146,7 @@ getPlayerNameにあたる */
     margin-bottom: 80px;
 }
 
-#PN4 {
+#PN5 {
     margin-bottom: 0;
 } 
 
@@ -138,11 +164,81 @@ getPlayerNameにあたる */
 
 .getPlayerName > .okBox {
     width: 50px;
-    height: 22px;
+    height: 30px;
     border: solid 1px gray;
     background: white;
     color: black;
     display: flex;
     justify-content: center;
     text-align: center;
+    line-height: 30px;
+    margin-left: auto;
+}
+
+
+/* 入力情報を確認するところ */
+
+
+.profileCheck {
+    display: block !important;
+
+    margin-top: 15%;
+}
+
+.profileCheck h1 {
+    font-size: 40px;
+    margin-bottom: 100px;
+}
+
+.profileCheckBox {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+#PNO5 {
+    margin: 0;
+}
+
+.profileCheckBox h4 {
+    font-size: 30px;
+}
+
+.playerNameCheck {
+    width: 300px;
+    height: 30px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    line-height: 30px;
+    border: solid 1px gray;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+
+.profileCheck > .okBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 40px;
+    color: black;
+    font-size: 20px;
+    line-height: 40px;
+    background: white;
+    border: solid 1px gray;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-left: auto;
+}
+
+
+.matigaeta {
+    font-size: 20px;
+    position: absolute;
+    bottom:  50px;
+    left: 80px;
 }
