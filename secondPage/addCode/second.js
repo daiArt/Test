@@ -21,6 +21,16 @@ $(function() {
     })
 
 
+    // 前に戻るボタンの設定
+
+    let backButtonPosition = (windowWeight - pageWidht) / 2;
+    console.log(backButtonPosition)
+
+    $(".backButton").css({
+        left: backButtonPosition + 40
+    })
+
+
 
 
     // 会話部分の設定

@@ -35,7 +35,7 @@ img {
     left: 20px;
     bottom: 15px;
     position: absolute;
-    background: gray;
+    background: #2a2a2a;
 }
 
 
@@ -146,7 +146,7 @@ getPlayerNameにあたる */
     display: flex;
     text-align: center;
     justify-content: space-between;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 
 #PN5 {
@@ -154,12 +154,12 @@ getPlayerNameにあたる */
 } 
 
 .inputNameBox h4 {
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .playerName{
     width: 300px;
-    height: 30px;
+    height: 20px;
     text-align: center;
     box-sizing: border-box;
     margin-left: 50px;
@@ -185,7 +185,7 @@ getPlayerNameにあたる */
 .profileCheck {
     /* display: block; */
 
-    margin-top: 15%;
+    margin-top: 20%;
 }
 
 .profileCheck h1 {
@@ -196,7 +196,7 @@ getPlayerNameにあたる */
 .profileCheckBox {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 
 #PNO5 {
@@ -204,12 +204,12 @@ getPlayerNameにあたる */
 }
 
 .profileCheckBox h4 {
-    font-size: 30px;
+    font-size: 15px;
 }
 
 .playerNameCheck {
     width: 300px;
-    height: 30px;
+    height: 20px;
     background: white;
     display: flex;
     justify-content: center;
@@ -236,12 +236,4 @@ getPlayerNameにあたる */
     box-sizing: border-box;
     border-radius: 3px;
     margin-left: auto;
-}
-
-
-.matigaeta {
-    font-size: 20px;
-    position: absolute;
-    bottom:  50px;
-    left: 80px;
 }
