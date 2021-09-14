@@ -22,4 +22,21 @@ $(function() {
     })
 
 
+    // Mainの画面設定
+
+
+    $(".main").css({
+        width: pageWidht,
+        height: windowHeight
+    })
+
+
+    // 背景の設定
+
+    $(".background img").css({
+        width: windowWidth,
+        height: windowHeight
+    })
+
+
 })

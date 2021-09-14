@@ -11,6 +11,7 @@ body {
     color: white;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 
 a {
@@ -43,8 +44,7 @@ img {
 .main {
     /* ほぼ背景みたいなもの */
 
-    /* background: #1F1F1F; */
-    background: gray;
+    background: #2a2a2a;
     padding: 0 100px;
     box-sizing: border-box;
     /* text-align: center; */

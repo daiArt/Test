@@ -7,7 +7,7 @@
     font-family: ronde-b, sans-serif;
     font-style: normal;
     font-weight: 400;
-    background-color: red;
+    overflow: hidden;
 }
 
 a {
@@ -16,7 +16,15 @@ a {
 }
 
 .main  {
-    background-color: white
+    background-color: white;
+    margin: auto;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -100;
 }
 
 
