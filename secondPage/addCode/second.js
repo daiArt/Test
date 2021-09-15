@@ -1,7 +1,7 @@
 $(function() {
     
     
-    var windowWeight = localStorage.getItem('proNGWindowWidht')
+    var windowWidth = localStorage.getItem('proNGWindowWidht')
     var windowHeight = localStorage.getItem('proNGWindowHeight')
     
     
@@ -21,9 +21,18 @@ $(function() {
     })
 
 
+
+        // 背景の設定
+
+        $(".background img").css({
+            width: windowWidth,
+            height: windowHeight
+        })
+
+
     // 前に戻るボタンの設定
 
-    let backButtonPosition = (windowWeight - pageWidht) / 2;
+    let backButtonPosition = (windowWidth - pageWidht) / 2;
     console.log(backButtonPosition)
 
     $(".backButton").css({
@@ -137,6 +146,17 @@ $(function() {
         // 最初の設定
         
         // let playerSum = localStorage.getItem('playerSum')
+
+
+        for (i = 1; i <= 5; i++) {
+            $("#PN" + i).css({
+                display: 'flex'
+            })
+
+            $("#PNO" + i).css({
+                display: 'flex'
+            })
+        }
         
         if (playerSum < 5) {
             for (i = 5; i > playerSum; i--)  {
@@ -203,6 +223,25 @@ $(function() {
             $(".getPlayerName").css({display: 'block'})
         }
         pageStage -= 1;
+
+    })
+
+
+    $(".profileCheck > .okBox").click(function() {
+        alert('ok')
+
+        let testSum = localStorage.getItem('playerSum');
+        let targetName = [];
+
+        for (i = 0; 1 <= 4; i++) {
+
+            let strage = localStorage.getItem('player' + i);
+
+            targetName[i] = 'プレイヤー' + i +strage
+        }
+
+        alert('プレイ人数は' + testSum);
+        alert('プレイヤーは' + testName)
 
     })
 

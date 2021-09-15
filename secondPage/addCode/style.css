@@ -12,6 +12,7 @@ body {
     display: flex;
     justify-content: center;
     overflow: hidden;
+    background: #2a2a2a;
 }
 
 a {
@@ -48,6 +49,13 @@ img {
     padding: 0 100px;
     box-sizing: border-box;
     /* text-align: center; */
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -100;
 }
 
 
@@ -219,6 +227,11 @@ getPlayerNameにあたる */
     border: solid 1px gray;
     box-sizing: border-box;
     border-radius: 5px;
+}
+
+.playerNameCheck p {
+    font-size:15px;
+    line-height: 20px;;
 }
 
 
