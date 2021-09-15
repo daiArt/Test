@@ -227,22 +227,22 @@ $(function() {
     })
 
 
-    $(".profileCheck > .okBox").click(function() {
-        alert('ok')
+    // $(".profileCheck > .okBox").click(function() {
+    //     alert('ok')
 
-        let testSum = localStorage.getItem('playerSum');
-        let targetName = [];
+    //     let testSum = localStorage.getItem('playerSum');
+    //     let targetName = [];
 
-        for (i = 0; 1 <= 4; i++) {
+    //     for (i = 0; 1 <= 4; i++) {
 
-            let strage = localStorage.getItem('player' + i);
+    //         let strage = localStorage.getItem('player' + i);
 
-            targetName[i] = 'プレイヤー' + i +strage
-        }
+    //         targetName[i] = 'プレイヤー' + i +strage
+    //     }
 
-        alert('プレイ人数は' + testSum);
-        alert('プレイヤーは' + testName)
+    //     alert('プレイ人数は' + testSum);
+    //     alert('プレイヤーは' + testName)
 
-    })
+    // })
 
 }) 
