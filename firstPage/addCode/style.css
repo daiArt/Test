@@ -20,7 +20,7 @@ img {
 }
 
 .main  {
-    background-image: url(/image/tittleDesu.png);
+    background-image: url(../backgroundImage/tittleDesu.png);
     background-size: cover;
     margin: auto;
     padding-top: 8%;
@@ -38,7 +38,7 @@ img {
 
 .tittleLogo {
     /* background: red; */
-    background-image: url(/image/inaduma.png);
+    background-image: url(../backgroundImage/inaduma.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 80%;
