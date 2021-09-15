@@ -228,7 +228,6 @@ $(function() {
 
 
     $(".profileCheck > .okBox").click(function() {
-        alert('ok')
 
         let testSum = localStorage.getItem('playerSum');
         let targetName = [];
@@ -241,5 +240,9 @@ $(function() {
         }
 
     })
+
+
+    
+
 
 }) 

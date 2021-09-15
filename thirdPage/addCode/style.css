@@ -9,9 +9,48 @@ body {
     font-weight: 400;
     display: flex;
     justify-content: center;
-    overflow: hidden;
+    /* overflow: hidden; */
+}
+
+img {
+    width: 100%;
 }
 
 .main {
-    background: red;
+    background: white;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -100;
+    background: #2a2a2a;
+}
+
+
+.gameUpper {
+    /* 仮の背景 */
+
+    background-image: url(/image/kariBakgroundImage.png);
+    background-size: cover;
+}
+
+
+
+div.talkHeader {
+    /* background: skyblue; */
+
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5%;
+    font-size: 20px;
+    color: white;
+}
+
+
+.sceneSkip {
+    background: rgba(0,0,0,0.6);
+    border: solid 1px white;
+    padding: 5px;
 }
