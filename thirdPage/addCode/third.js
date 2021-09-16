@@ -10,6 +10,30 @@ $(function() {
     
     let pageWidht = windowHeight * 0.75;
 
+            
+    $(".main").css({
+        width: pageWidht,
+        height: windowHeight
+    })
+    
+    $(".background").css({
+        width: windowWidth,
+        height: windowHeight
+    })
+
+    $(".talkHeader").css({
+        width: pageWidht,
+    })
+    
+
+    let topScreanHiehgt = pageWidht / 1.9;
+    console.log(topScreanHiehgt + '画面の上のところのサイズ')
+    
+    $(".gameUpper").css({
+        height: topScreanHiehgt
+    })
+    
+
 
 
 
@@ -23,11 +47,6 @@ $(function() {
         localStorage.setItem('proNGWindowWidht' , windowWidth)
         localStorage.setItem('proNGWindowHeight' , windowHeight)
         
-        var testW = localStorage.getItem('proNGWindowWidht')
-        var testH = localStorage.getItem('proNGWindowHeight')
-
-        console.log(testW)
-        console.log(testH)
 
         let pageWidht = windowHeight * 0.75;
 
@@ -41,6 +60,10 @@ $(function() {
         $(".background").css({
             width: windowWidth,
             height: windowHeight
+        })
+
+        $(".talkHeader").css({
+            width: pageWidht
         })
         
         
@@ -56,5 +79,6 @@ $(function() {
         })
         
     })
-        
+
+
 })
