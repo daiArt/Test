@@ -21,7 +21,7 @@ a {
 }
 
 ::placeholder {
-    font-family: ronde-b, sans-serif;
+    font-family: ronde-b, 'DotGothic16',sans-serif;
     font-style: normal;
     font-weight: 400;
 }
