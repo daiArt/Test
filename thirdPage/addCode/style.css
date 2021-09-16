@@ -32,7 +32,7 @@ img {
 .gameUpper {
     /* 仮の背景 */
 
-    background-image: url(/image/kariBakgroundImage.png);
+    background-image: url(../thirdBakcgrorundImage/kariBakgroundImage.png);
     background-size: cover;
     display: flex;
     align-items: flex-end;
