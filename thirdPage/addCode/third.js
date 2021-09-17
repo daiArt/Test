@@ -26,13 +26,26 @@ $(function() {
     })
     
 
-    let topScreanHiehgt = pageWidht / 1.9;
-    console.log(topScreanHiehgt + '画面の上のところのサイズ')
+    let topScreanHiehgt = pageWidht / 1.75;
+    let downScreanHeight = windowHeight - topScreanHiehgt;
     
     $(".gameUpper").css({
         height: topScreanHiehgt
     })
     
+    $(".gameDowner").css({
+        height: downScreanHeight
+    })
+
+    $(".downerContent").css({
+        height: downScreanHeight * 0.8
+    })
+
+    let getQuestionTextHeight = $(".questionText").height();
+    let downContentHeight = downScreanHeight * 0.8  - 35 - getQuestionTextHeight
+    $(".questionBox").css({
+        height: downContentHeight
+    })
 
 
 
@@ -71,14 +84,192 @@ $(function() {
         // 画面の上のサイズを設定
         
         
-        let topScreanHiehgt = pageWidht / 1.9;
+        let topScreanHiehgt = pageWidht / 1.75;
+        let downSvreanHeight = windowHeight - topScreanHiehgt;
+
+
         console.log(topScreanHiehgt + '画面の上のところのサイズ')
         
         $(".gameUpper").css({
             height: topScreanHiehgt
         })
+
+        $(".gameDowner").css({
+            height: downSvreanHeight
+        })
+
+        $(".downerContent").css({
+            height: downSvreanHeight * 0.8
+        })
         
     })
 
+
+
+
+    // 会話の内容を配列に組み込む
+
+    const storyTlaking = [
+        '俺たちの街の電力システムがジャックされた！？　デンコウジャー助けて！！',
+        '街のいろんなところから電気が使えなくなったとの通報が、、、',
+        'これは〇〇の仕業だ！',
+        '俺たちデンコウジャーがこの街を救って見せるぞ”！！',
+        'どうやら、発電所に異常があるみたいだ、、',
+        'とりあえず発電所に行くぞ！',
+        '発電所到着',
+        'どうやらこの中に発電所があるみたいだ、、　ってあいつらは！',
+        'よくきたなデンコウジャー。',
+        'お前らに30分だけくれてやる！',
+        'その間に我々が占領した5つの発電所を開放するんだな',
+        'せいぜい手遅れにならないよう足掻くんだな。',
+        'まずい、、30分以内に敵を倒しきらなきゃいけないみたいだ、、',
+        '最初は火力発電所だ！　いくぞ！',
+        'ｷｪｪｪｪｪｪｪｪ (敵が現れた)',
+        'あいつがここを襲ったようだな、、',
+        'ここは俺の出番だな。　火力発電所、返してもらうぞ！',
+        'いけ！　○○○○ ブラスト！',
+        'うっ・・・　ﾄﾞｼｬｧ (敵が倒れた)',
+        'ふぅ、なんとかなったな。',
+        '次は水力エリアだ！',
+        'ｸﾞｱｧｧｧｧ',
+        '今度の敵はこいつか、、',
+        'さぁ　俺の技を受けていただこう！',
+        'これが俺の必殺技だ！',
+        'いけっ！　〇〇〇〇キャノン！！',
+        'ﾊﾞｯｼｬｰﾝ',
+        'ｸﾞｪｪｪ..(敵が倒れた)',
+        'ﾌｯ... この程度か... 次は風力発電所だ！',
+        'つ...次は僕か...',
+        '〇〇〇〇〇スラッシュ',
+        'ｽﾊﾟｯｯ　(敵が倒れた)',
+        'つ..次行こう！',
+        'ｸﾞﾜｧｰ',
+        'HEY!HEY!HEY!',
+        '〇〇〇〇〇！！！　ショット！！！',
+        '買ったぜ！　ウェイ！',
+        '次だZE GOGOGO!!!',
+        'ｸﾞﾙﾙﾙﾙ',
+        '我に宿し封印された力を今この場で開放してやろう！！',
+        'いけっ！　〇〇〇〇！　エクスプローション！',
+        'ﾄﾞｯｶｰﾝ!!',
+        'どうやら我の相手をするには100年早かったようだな！！',
+        'きっと次でラストだ！　よし！　ラスボスのところに行くぞ！',
+        'よくぞここまできたな。　　褒めてやろうじゃないか',
+        '最後は手強いぞ、、　みんなで力を合わせよう！！',
+        'おぉ！！',
+        '行くぞ！　俺たちの合体技！',
+        'パワージェネレーション！！！　〇〇！',
+        'お、おのれ、、　覚えていろ！！',
+        'こうして全ての発電所が正常に稼働し、街の姿は元に戻った。',
+
+    ]
+
+
+    const storyTalker = [
+        '住民',
+        'システム',
+        'ブルー',
+        'レッド',
+        'ブラック',
+        'レッド',
+        '',
+        'ブルー',
+        'ラスボス',
+        'ラスボス',
+        'ラスボス',
+        'ラスボス',
+        'レッド',
+        'レッド',
+        'てき',
+        'ブルー',
+        'レッド',
+        'レッド',
+        'てき',
+        'レッド',
+        'レッド',
+        'てき',
+        'ブルー',
+        'ブルー',
+        'ブルー',
+        'ブルー',
+        '',
+        'てき',
+        'ブルー',
+        'グリーン',
+        'グリーン',
+        'てき',
+        'グリーン',
+        'てき',
+        'イエロー',
+        'イエロー',
+        'イエロー',
+        'イエロー',
+        'てき',
+        'ブラック',
+        'ブラック',
+        '',
+        'ブラック',
+        'レッド',
+        'ラスボス',
+        'レッド',
+        '全員',
+        'ブルー',
+        '全員',
+        'ラスボス',
+        'システム'
+    ]
+
+
+    let talkCount = 1;
+
+
+    $(".gameUpper").click(function() {
+
+        console.log(talkCount)
+        
+    
+        // if (talkCount === 6) {
+
+
+        //     // ラスボスと出会うシーン
+
+        // }
+
+        // if (talkCount === 17) {
+
+        //     $(".downerContent").css({
+        //         display: 'block'
+        //     })
+
+        //     $(".img1").css({
+        //         display: 'block'
+        //     })
+
+        //     $(".answerBox > h2").html('<h2> A. ブラスト')
+
+        //     $(".attackButton").click(function() {
+
+        //         let target = document.getElementById('inputAnswer');
+        //         let storage = target.value;
+        //         alert(storage)
+
+        //     })
+
+        // }
+        
+        // else {
+        //     talkCount += 1;
+        // }
+        
+        
+        if(talkCount === 51) {
+        } else {
+            $(".talkerContentBox").html('<h4>' + storyTlaking[talkCount] + '</h4>')
+            $(".talkerName").html('<h4>' + storyTalker[talkCount] + '</h4>')
+            talkCount += 1;
+        }
+        
+        
+    })
 
 })

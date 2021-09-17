@@ -36,54 +36,51 @@ img {
     background-size: cover;
     display: flex;
     align-items: flex-end;
+    margin: 0 auto;
 }
 
 
-
-div.talkHeader {
+.talkHeader {
     /* background: skyblue; */
 
     position: fixed;
-    display: flex;
     height: 50px;
-    justify-content: space-between;
     align-items: center;
     padding: 10px 5%;
-    font-size: 20px;
+    font-size: 30px;
     color: white;
     box-sizing: border-box;
-}
-
-
-.sceneSkip {
-    background: rgba(0,0,0,0.6);
-    border: solid 1px white;
-    padding: 5px;
+    margin-top: 10px;
+    display: none;
 }
 
 
 /* キャラクター部分 */
-
+/* 
 
 .talkCharacter {
     display: flex;
     justify-content: space-between;
     align-items:flex-end;
-    margin: 0 auto;
-    margin-top: 30px;
 
+    margin: auto;
+    margin-top: 30px;
 }
 
 .talkCharacter > div {
     width: 35%;
     display: flex;
     align-items:flex-end;
-}
+} */
 
 
 
 /* 会話の内容を表示 */
 
+
+.talkSpace {
+    width: 100%;
+}
 
 .talkContent {
     background: rgba(0, 0, 0, 0.7);
@@ -93,12 +90,12 @@ div.talkHeader {
     margin: 0 auto;
     border: solid 3px white;
     border-radius: 10px;
+    margin: 0 auto;
     margin-bottom: 10px;
     padding: 15px;
     box-sizing: border-box;
     font-size: 18px;
     line-height: 25px;;
-
 }
 
 .talkerName {
@@ -119,4 +116,109 @@ div.talkHeader {
     margin-left: 20px;
     display: flex;
     align-items: center;
+}
+
+
+
+
+
+/* した画面の装飾 */
+
+
+.gameDowner {
+    background-image: url(../thirdBakcgrorundImage/tizuHaikei.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.downerContent {
+    background: #FDF1DD;
+    width: 100%;
+    border: solid 1px black;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0 5%;
+    padding: 0 40px;
+    box-sizing: border-box;
+    display: none;
+}
+
+.questionText {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 35px;
+}
+
+.questionText h2 {
+    font-size: 30px;
+}
+
+.questionText p {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 18px;;
+}
+
+.questionBox {
+    display: flex;;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.questionImage {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.questionBox img {
+    width: 80%;
+    height: 60%;
+    display: none;
+}
+
+.answerBox {
+    margin-right: 40px;
+    text-align: right;
+}
+
+.answerBox > * {
+    margin-bottom: 30px;
+}
+
+.answerBox h2 {
+    margin-top: 15px;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.answerBox input {
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.answerBox input::placeholder {
+    text-align: center;
+    font-family: ronde-b, 'DotGothic16',sans-serif;
+}
+
+
+.attackButton {
+    background: red;
+    width: 80px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px black;
+    margin-left: auto;
 }
