@@ -259,9 +259,33 @@ $(function() {
         'システム'
     ]
 
-    const talkerCharacterLeft = [
-        ''
-    ]
+
+    // ※※到着・・　のとこ
+
+    function announcePlaceOn() {
+
+        $(".announcePlace").css({
+            display: 'flex'
+        });
+
+        $(".talkSpace").css({
+            display: 'none'
+        })
+    }
+
+    function announcePlaceOff() {
+        $(".announcePlace").addClass('closeChangePlace')
+        $(".talkSpace").css({
+            display: 'block'
+        })
+
+        setTimeout(function() {
+            $(".announcePlace").attr('class','announcePlace');
+            $(".announcePlace").css({
+                display: 'none'
+            })
+        },2000)
+    }
 
 
     let talkCount = 1;
@@ -277,19 +301,11 @@ $(function() {
 
             // 発電所到着　のやつを作る
 
-            $(".announcePlace").css({
-                display: 'flex'
-            });
-
-            $(".talkSpace").css({
-                display: 'none'
-            })
+            announcePlaceOn();
 
             setTimeout(function() {
-                $(".announcePlace").addClass('closeChangePlace')
-                $(".talkSpace").css({
-                    display: 'block'
-                })
+
+                announcePlaceOff();
 
                 talkCount = 6;
 
@@ -299,9 +315,7 @@ $(function() {
                 if (characterSelect >= 1 & characterSelect <= 11) {
                     $("#talkerLeft").attr('src','./thirdPage/characterImage/character' + characterSelect + '.png')
                 }
-    
-    
-                console.log(characterSelect)
+
     
                 $(".talkerContentBox").html('<h4>' + storyTlaking[talkCount] + '</h4>')
                 $(".talkerName").html('<h4>' + talkerCharacterName[characterSelect] + '</h4>')
@@ -313,9 +327,64 @@ $(function() {
 
 
 
-        } else if (talkCount === 13) {
+        } else if (talkCount === 14) {
 
-            // ラスボス　登場
+            // 戦闘1 開始
+
+            talkCount = 14;
+
+            $(".announcePlace").html('<h1>火力発電</h1>');
+
+            announcePlaceOn();
+
+            setTimeout(function() {
+
+                announcePlaceOff();
+
+                talkCount = 14;
+
+                let characterSelect = storyTalkerNomber[talkCount];
+                characterSelect = Number(characterSelect)
+    
+                if (characterSelect >= 1 & characterSelect <= 11) {
+                    $("#talkerLeft").attr('src','./thirdPage/characterImage/character' + characterSelect + '.png')
+                }
+
+    
+                $(".talkerContentBox").html('<h4>' + storyTlaking[talkCount] + '</h4>')
+                $(".talkerName").html('<h4>' + talkerCharacterName[characterSelect] + '</h4>')
+
+                talkCount = 15;
+
+            },2500)
+
+        } else if (talkCount === 17) {
+
+            talkCount = 17;
+
+            $(".announcePlace").html('<h1>戦闘開始</h1>');
+
+            announcePlaceOn();
+
+            setTimeout(function() {
+                announcePlaceOff();
+
+                talkCount = 17;
+
+                let characterSelect = storyTalkerNomber[talkCount];
+                characterSelect = Number(characterSelect)
+    
+                if (characterSelect >= 1 & characterSelect <= 11) {
+                    $("#talkerLeft").attr('src','./thirdPage/characterImage/character' + characterSelect + '.png')
+                }
+
+    
+                $(".talkerContentBox").html('<h4>' + storyTlaking[talkCount] + '</h4>')
+                $(".talkerName").html('<h4>' + talkerCharacterName[characterSelect] + '</h4>')
+
+                talkCount = 18;
+
+            })
 
         }
 
@@ -323,7 +392,7 @@ $(function() {
 
         
         
-        if (talkCount <= 52) {
+        else if (talkCount <= 52) {
             let characterSelect = storyTalkerNomber[talkCount];
             characterSelect = Number(characterSelect)
 
@@ -331,8 +400,6 @@ $(function() {
                 $("#talkerLeft").attr('src','./thirdPage/characterImage/character' + characterSelect + '.png')
             }
 
-
-            console.log(characterSelect)
 
             $(".talkerContentBox").html('<h4>' + storyTlaking[talkCount] + '</h4>')
             $(".talkerName").html('<h4>' + talkerCharacterName[characterSelect] + '</h4>')

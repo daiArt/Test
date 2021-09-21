@@ -208,7 +208,6 @@ img {
     margin: 0 5%;
     padding: 0 40px;
     box-sizing: border-box;
-    display: none;
 }
 
 .questionText {
@@ -235,8 +234,6 @@ img {
 }
 
 .questionImage {
-    background-size: cover;
-    background-repeat: no-repeat;
     width: 40%;
     display: flex;
     align-items: center;
@@ -247,7 +244,6 @@ img {
 .questionBox img {
     width: 80%;
     height: 60%;
-    display: none;
 }
 
 .answerBox {
