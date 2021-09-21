@@ -284,7 +284,7 @@ $(function() {
             $(".announcePlace").css({
                 display: 'none'
             })
-        },2000)
+        },200)
     }
 
 
@@ -384,7 +384,7 @@ $(function() {
 
                 talkCount = 18;
 
-            })
+            },2500)
 
         }
 
