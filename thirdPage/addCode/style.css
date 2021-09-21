@@ -199,6 +199,17 @@ img {
     align-items: center;
 }
 
+.wr-downerContent {
+    background: #FDF1DD;
+    width: 100%;
+    border: solid 1px black;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0 5%;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
 .downerContent {
     background: #FDF1DD;
     width: 100%;
@@ -208,6 +219,7 @@ img {
     margin: 0 5%;
     padding: 0 40px;
     box-sizing: border-box;
+    display: none;
 }
 
 .questionText {
