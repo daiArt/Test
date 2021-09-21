@@ -1,12 +1,14 @@
 $(function() {
 
 
-    var windowWidth = localStorage.getItem('proNGWindowWidht')
-    var windowHeight = localStorage.getItem('proNGWindowHeight')
-    
+    let windowWidth = $(window).width();
+    let windowHeight = $(window).height();
 
-    console.log(windowHeight + 'ウィンドウの高さ')
-    console.log(windowWidth + 'ウィンドウの横幅')
+    console.log('高さ' + windowHeight);
+    console.log('横幅' + windowHeight);
+
+    localStorage.setItem('proNGWindowWidht' , windowWidth)
+    localStorage.setItem('proNGWindowHeight' , windowWidth)
     
     let pageWidht = windowHeight * 0.75;
 
@@ -33,8 +35,13 @@ $(function() {
         height: topScreanHiehgt
     })
 
+    let pageRightStart = (windowWidth- pageWidht) / 2;
+
     $(".announcePlace").css({
         height: topScreanHiehgt,
+        width: pageWidht,
+        top: 0,
+        left: pageRightStart
     })
     
     $(".gameDowner").css({
@@ -98,8 +105,14 @@ $(function() {
             height: topScreanHiehgt
         })
 
+
+        let pageRightStart = (windowWidth - pageWidht) / 2;
+
         $(".announcePlace").css({
-            height: topScreanHiehgt
+            height: topScreanHiehgt,
+            // width: pageWidht,
+            // top: 0,
+            // right: pageRightStart
         })
 
         $(".gameDowner").css({
@@ -256,6 +269,8 @@ $(function() {
 
     $(".gameUpper").click(function() {
 
+
+
         console.log(talkCount)
 
         if (talkCount === 6) {
@@ -264,9 +279,43 @@ $(function() {
 
             $(".announcePlace").css({
                 display: 'flex'
+            });
+
+            $(".talkSpace").css({
+                display: 'none'
             })
 
+            setTimeout(function() {
+                $(".announcePlace").addClass('closeChangePlace')
+                $(".talkSpace").css({
+                    display: 'block'
+                })
 
+                talkCount = 6;
+
+                let characterSelect = storyTalkerNomber[talkCount];
+                characterSelect = Number(characterSelect)
+    
+                if (characterSelect >= 1 & characterSelect <= 11) {
+                    $("#talkerLeft").attr('src','./thirdPage/characterImage/character' + characterSelect + '.png')
+                }
+    
+    
+                console.log(characterSelect)
+    
+                $(".talkerContentBox").html('<h4>' + storyTlaking[talkCount] + '</h4>')
+                $(".talkerName").html('<h4>' + talkerCharacterName[characterSelect] + '</h4>')
+
+                talkCount = 7;
+
+            },2500)
+
+
+
+
+        } else if (talkCount === 13) {
+
+            // ラスボス　登場
 
         }
 
@@ -274,10 +323,7 @@ $(function() {
 
         
         
-        
-        else if(talkCount === 52) {
-        } else {
-
+        if (talkCount <= 52) {
             let characterSelect = storyTalkerNomber[talkCount];
             characterSelect = Number(characterSelect)
 

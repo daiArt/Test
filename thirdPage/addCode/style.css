@@ -9,7 +9,7 @@ body {
     font-weight: 400;
     display: flex;
     justify-content: center;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 img {
@@ -43,7 +43,7 @@ img {
 /* 発電所到着 のところ */
 
 .announcePlace {
-    position: relative;
+    position: absolute;
     color: white;
     width: 100%;;
     background: rgba(21, 21, 21, 0.8);
@@ -74,6 +74,22 @@ img {
 
     100% {
         opacity: 0;
+    }
+}
+
+.closeChangePlace {
+    animation: closeChangePlace 1s forwards;
+}
+
+@keyframes closeChangePlace {
+
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
     }
 }
 
@@ -108,7 +124,7 @@ img {
 
 .talkCharacter {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items:flex-end;
 
     margin: auto;
@@ -116,9 +132,10 @@ img {
 }
 
 .talkCharacter > div {
-    width: 35%;
+    width: 45%;
     display: flex;
     align-items:flex-end;
+    margin: 0 30px;
 }
 
 
