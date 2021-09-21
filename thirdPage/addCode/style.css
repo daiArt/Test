@@ -40,6 +40,54 @@ img {
 }
 
 
+/* 発電所到着 のところ */
+
+.announcePlace {
+    position: relative;
+    color: white;
+    width: 100%;;
+    background: rgba(21, 21, 21, 0.8);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    display: none;
+}
+
+.announcePlace h1{
+    animation: changePlace 2s ease-in forwards;
+}
+
+@keyframes changePlace {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.announcePlace ::before {
+    content: " -";
+    display: inline-block;
+}
+
+.announcePlace ::after {
+    content: " -";
+    display: inline-block;
+}
+
+
 .talkHeader {
     /* background: skyblue; */
 
@@ -56,7 +104,7 @@ img {
 
 
 /* キャラクター部分 */
-/* 
+
 
 .talkCharacter {
     display: flex;
@@ -71,7 +119,7 @@ img {
     width: 35%;
     display: flex;
     align-items:flex-end;
-} */
+}
 
 
 

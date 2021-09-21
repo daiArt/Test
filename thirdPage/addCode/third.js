@@ -32,6 +32,10 @@ $(function() {
     $(".gameUpper").css({
         height: topScreanHiehgt
     })
+
+    $(".announcePlace").css({
+        height: topScreanHiehgt,
+    })
     
     $(".gameDowner").css({
         height: downScreanHeight
@@ -94,6 +98,10 @@ $(function() {
             height: topScreanHiehgt
         })
 
+        $(".announcePlace").css({
+            height: topScreanHiehgt
+        })
+
         $(".gameDowner").css({
             height: downSvreanHeight
         })
@@ -116,8 +124,8 @@ $(function() {
         '俺たちデンコウジャーがこの街を救って見せるぞ”！！',
         'どうやら、発電所に異常があるみたいだ、、',
         'とりあえず発電所に行くぞ！',
-        '発電所到着',
-        'どうやらこの中に発電所があるみたいだ、、　ってあいつらは！',
+        'どうやらこの中に発電所があるみたいだ、、',
+        'ってあいつは！',
         'よくきたなデンコウジャー。',
         'お前らに30分だけくれてやる！',
         'その間に我々が占領した5つの発電所を開放するんだな',
@@ -146,6 +154,7 @@ $(function() {
         'ｸﾞﾜｧｰ',
         'HEY!HEY!HEY!',
         '〇〇〇〇〇！！！　ショット！！！',
+        'ピカーッ！！！',
         '買ったぜ！　ウェイ！',
         '次だZE GOGOGO!!!',
         'ｸﾞﾙﾙﾙﾙ',
@@ -165,58 +174,80 @@ $(function() {
     ]
 
 
-    const storyTalker = [
+    const storyTalkerNomber = [
+        '12',
+        '13',
+        '2',
+        '1',
+        '5',
+        '1',
+        '2',
+        '2',
+        '11',
+        '11',
+        '11',
+        '11',
+        '1',
+        '1',
+        '6',
+        '2',
+        '1',
+        '1',
+        '6',
+        '1',
+        '1',
+        '7',
+        '2',
+        '2',
+        '2',
+        '2',
+        '2',
+        '7',
+        '2',
+        '3',
+        '3',
+        '8',
+        '3',
+        '9',
+        '4',
+        '4',
+        '4',
+        '4',
+        '4',
+        '10',
+        '5',
+        '5',
+        '',
+        '5',
+        '1',
+        '11',
+        '1',
+        '0',
+        '2',
+        '0',
+        '11',
+        '13'
+    ]
+
+    const talkerCharacterName = [
+        '全員',
+        'レッド',
+        'ブルー',
+        'グリーン',
+        'イエロー',
+        'ブラック',
+        '敵 A',
+        '敵 B',
+        '敵 C',
+        '敵 D',
+        '敵 E',
+        'ラスボス',
         '住民',
-        'システム',
-        'ブルー',
-        'レッド',
-        'ブラック',
-        'レッド',
-        '',
-        'ブルー',
-        'ラスボス',
-        'ラスボス',
-        'ラスボス',
-        'ラスボス',
-        'レッド',
-        'レッド',
-        'てき',
-        'ブルー',
-        'レッド',
-        'レッド',
-        'てき',
-        'レッド',
-        'レッド',
-        'てき',
-        'ブルー',
-        'ブルー',
-        'ブルー',
-        'ブルー',
-        '',
-        'てき',
-        'ブルー',
-        'グリーン',
-        'グリーン',
-        'てき',
-        'グリーン',
-        'てき',
-        'イエロー',
-        'イエロー',
-        'イエロー',
-        'イエロー',
-        'てき',
-        'ブラック',
-        'ブラック',
-        '',
-        'ブラック',
-        'レッド',
-        'ラスボス',
-        'レッド',
-        '全員',
-        'ブルー',
-        '全員',
-        'ラスボス',
         'システム'
+    ]
+
+    const talkerCharacterLeft = [
+        ''
     ]
 
 
@@ -226,46 +257,39 @@ $(function() {
     $(".gameUpper").click(function() {
 
         console.log(talkCount)
-        
-    
-        // if (talkCount === 6) {
+
+        if (talkCount === 6) {
+
+            // 発電所到着　のやつを作る
+
+            $(".announcePlace").css({
+                display: 'flex'
+            })
 
 
-        //     // ラスボスと出会うシーン
 
-        // }
+        }
 
-        // if (talkCount === 17) {
 
-        //     $(".downerContent").css({
-        //         display: 'block'
-        //     })
 
-        //     $(".img1").css({
-        //         display: 'block'
-        //     })
-
-        //     $(".answerBox > h2").html('<h2> A. ブラスト')
-
-        //     $(".attackButton").click(function() {
-
-        //         let target = document.getElementById('inputAnswer');
-        //         let storage = target.value;
-        //         alert(storage)
-
-        //     })
-
-        // }
-        
-        // else {
-        //     talkCount += 1;
-        // }
         
         
-        if(talkCount === 51) {
+        
+        else if(talkCount === 52) {
         } else {
+
+            let characterSelect = storyTalkerNomber[talkCount];
+            characterSelect = Number(characterSelect)
+
+            if (characterSelect >= 1 & characterSelect <= 11) {
+                $("#talkerLeft").attr('src','./thirdPage/characterImage/character' + characterSelect + '.png')
+            }
+
+
+            console.log(characterSelect)
+
             $(".talkerContentBox").html('<h4>' + storyTlaking[talkCount] + '</h4>')
-            $(".talkerName").html('<h4>' + storyTalker[talkCount] + '</h4>')
+            $(".talkerName").html('<h4>' + talkerCharacterName[characterSelect] + '</h4>')
             talkCount += 1;
         }
         
