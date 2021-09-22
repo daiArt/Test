@@ -17,33 +17,46 @@ $(function() {
         width: pageWidht,
         height: windowHeight
     })
+
     
     $(".background").css({
         width: windowWidth,
         height: windowHeight
     })
-
+    
     $(".talkHeader").css({
         width: pageWidht,
     })
     
-
+    
     let topScreanHiehgt = pageWidht / 1.75;
     let downScreanHeight = windowHeight - topScreanHiehgt;
     
     $(".gameUpper").css({
         height: topScreanHiehgt
     })
-
-    let pageRightStart = (windowWidth- pageWidht) / 2;
-
+    
+    let pageLeftStart = (windowWidth- pageWidht) / 2;
+    
     $(".announcePlace").css({
         height: topScreanHiehgt,
         width: pageWidht,
         top: 0,
-        left: pageRightStart
+        left: pageLeftStart
     })
     
+    $(".answerCommentary").css({
+        width: pageWidht,
+        height: windowHeight,
+        left: pageLeftStart
+    })
+
+    let answerCommentaryHeight = windowHeight * 0.9
+
+    $(".answerCommentary > div").css({
+        height: answerCommentaryHeight
+    })
+
     $(".gameDowner").css({
         height: downScreanHeight
     })
@@ -55,7 +68,7 @@ $(function() {
     $(".wr-downerContent").css({
         height: downScreanHeight * 0.8
     })
-
+    
     let getQuestionTextHeight = $(".questionText").height();
     let downContentHeight = downScreanHeight * 0.8  - 35 - getQuestionTextHeight
     $(".questionBox").css({
@@ -110,13 +123,26 @@ $(function() {
         })
 
 
-        let pageRightStart = (windowWidth - pageWidht) / 2;
+        let pageLeftStart = (windowWidth - pageWidht) / 2;
 
         $(".announcePlace").css({
             height: topScreanHiehgt,
             // width: pageWidht,
             // top: 0,
             // right: pageRightStart
+        })
+
+            
+        $(".answerCommentary").css({
+            width: pageWidht,
+            height: windowHeight,
+            left: pageLeftStart
+        })
+
+        let answerCommentaryHeight = windowHeight * 0.9
+
+        $(".answerCommentary > div").css({
+            height: answerCommentaryHeight
         })
 
         $(".gameDowner").css({
@@ -448,7 +474,7 @@ $(function() {
                 $(".questionImage > img").attr('src','./thirdPage/questionBox/1.png')
 
                 $(".answerBox > h2").html(
-                    'A. 〇〇〇 ブラスト'
+                    'A. ???? ブラスト'
                 )
 
                 talkCount = 100
@@ -489,8 +515,9 @@ $(function() {
                     $(".talkerName").html('<h4>' + talkerCharacterName[characterSelect] + '</h4>')
                     talkCount += 1;
 
+
                 } else {
-                    alert('どうやら違うようだ、、　ちゃんとカタカナで書いたか？')
+                    // alert('どうやら違うようだ、、　ちゃんとカタカナで書いたか？')
                 }
 
             })
@@ -577,7 +604,7 @@ $(function() {
                 $(".questionImage > img").attr('src','./thirdPage/questionBox/2.png')
 
                 $(".answerBox > h2").html(
-                    'A. 〇〇〇○ キャノン'
+                    'A. ???? キャノン'
                 )
 
                 talkCount = 100
@@ -620,7 +647,7 @@ $(function() {
                     talkCount += 1;
 
                 } else {
-                    alert('どうやら違うようだ、、　ちゃんとカタカナで書いたか？')
+                    // alert('どうやら違うようだ、、　ちゃんとカタカナで書いたか？')
                 }
 
             })
@@ -752,7 +779,7 @@ $(function() {
                     talkCount += 1;
 
                 } else {
-                    alert('どうやら違うようだ、、　ちゃんとカタカナで書いたか？')
+                    // alert('どうやら違うようだ、、　ちゃんとカタカナで書いたか？')
                 }
 
             })
@@ -884,7 +911,7 @@ $(function() {
                 talkCount += 1;
 
             } else {
-                alert('どうやら違うようだ、、　ちゃんとカタカナで書いたか？')
+                // alert('どうやら違うようだ、、　ちゃんとカタカナで書いたか？')
             }
 
         })
@@ -1012,7 +1039,7 @@ $(function() {
                     talkCount += 1;
     
                 } else {
-                    alert('どうやら違うようだ、、　ちゃんとカタカナで書いたか？')
+                    // alert('どうやら違うようだ、、　ちゃんとカタカナで書いたか？')
                 }
     
             })
@@ -1144,7 +1171,7 @@ $(function() {
                     talkCount += 1;
     
                 } else {
-                    alert('どうやら違うようだ、、　ちゃんとカタカナで書いたか？')
+                    // alert('どうやら違うようだ、、　ちゃんとカタカナで書いたか？')
                 }
     
             })
@@ -1165,6 +1192,8 @@ $(function() {
             $(".talkerContentBox").html('<h4>' + storyTlaking[talkCount] + '</h4>')
             $(".talkerName").html('<h4>' + talkerCharacterName[characterSelect] + '</h4>')
             talkCount += 1;
+
+
         }
         
         

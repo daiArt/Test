@@ -9,7 +9,7 @@ body {
     font-weight: 400;
     display: flex;
     justify-content: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 img {
@@ -206,17 +206,12 @@ img {
     border-radius: 15px;
     overflow: hidden;
     margin: 0 5%;
-    padding: 0 40px;
     box-sizing: border-box;
 }
 
 .downerContent {
-    background: #FDF1DD;
     width: 100%;
-    border: solid 1px black;
-    border-radius: 15px;
     overflow: hidden;
-    margin: 0 5%;
     padding: 0 40px;
     box-sizing: border-box;
     display: none;
@@ -229,7 +224,7 @@ img {
 }
 
 .questionText h2 {
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .questionText p {
@@ -269,7 +264,7 @@ img {
 
 .answerBox h2 {
     margin-top: 15px;
-    font-size: 30px;
+    font-size: 25px;
     text-decoration: underline;
 }
 
@@ -294,5 +289,72 @@ img {
     justify-content: center;
     align-items: center;
     border: solid 1px black;
+    margin-left: auto;
+}
+
+
+
+
+
+/* 答えの解説を入れる */
+
+
+.answerCommentary {
+    position: absolute;
+    z-index: 101;
+    top: 0;
+    background:rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.answerCommentary > div{
+    display: none;
+    width: 90%;
+    border-radius: 20px;
+    border: solid 4px white;
+    color: white;
+    padding: 10% 5%;
+    box-sizing: border-box;
+    background: #000033;
+}
+
+.question1Ture h1 {
+    color: #DD6060;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.question1Ture h2 {
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.commentaryBox {
+    margin-top: 60px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.commentaryBox > div {
+    font-size: 18px;
+    line-height: 35px;;
+}
+
+.commentaryText {
+    height: 250px;;
+    /* background-color: navy; */
+}
+
+.commentaryImage {
+    width: 55%;
+    margin-left: auto;
+}
+
+.nextTalkCount {
+    width: 80px;
     margin-left: auto;
 }
