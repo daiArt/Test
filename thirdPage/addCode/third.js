@@ -1,5 +1,4 @@
 $(window).on('load', function() {
-
     let windowWidth = $(window).width();
     let windowHeight = $(window).height();
 
