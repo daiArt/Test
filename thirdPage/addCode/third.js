@@ -132,7 +132,7 @@ $(window).on('load', function() {
         'HEY!HEY!HEY!',
         '〇〇〇〇〇！！！　ショット！！！',
         'ピカーッ！！！',
-        '買ったぜ！　ウェイ！',
+        '勝ったぜ！　ウェイ！',
         '次だZE GOGOGO!!!',
         'ｸﾞﾙﾙﾙﾙ',
         '我に宿し封印された力を今この場で開放してやろう！！',
@@ -262,7 +262,7 @@ $(window).on('load', function() {
     $(".background").attr('id','gameUpperBack1')
 
 
-    let talkCount = 0;
+    let talkCount = 48;
 
     let questionStage = '';
 
