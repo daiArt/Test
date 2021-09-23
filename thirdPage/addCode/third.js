@@ -1,6 +1,5 @@
 $(function() {
 
-
     let windowWidth = $(window).width();
     let windowHeight = $(window).height();
 
@@ -259,6 +258,9 @@ $(function() {
         },200)
     }
 
+    $(".gameUpper").attr('id','gameUpperBack1')
+    $(".background").attr('id','gameUpperBack1')
+
 
     let talkCount = 0;
 
@@ -290,6 +292,9 @@ $(function() {
 
 
             // 発電所到着
+
+            $(".gameUpper").attr('id','gameUpperBack2');
+            $(".background").attr('id','gameUpperBack2')
 
             announcePlaceOn(); 
 
@@ -325,6 +330,11 @@ $(function() {
         else if (talkCount === 14) {
 
             // 火力発電所到着
+
+            $(".gameUpper").attr('id','gameUpperBack3');
+            $(".background").attr('id','gameUpperBack3')
+
+
 
             talkCount = 14;
 
@@ -513,6 +523,8 @@ $(function() {
         else if (talkCount === 21) {
 
             // 水力発電所到着
+            $(".gameUpper").attr('id','gameUpperBack4');
+            $(".background").attr('id','gameUpperBack4')
 
             talkCount = 21;
 
@@ -707,6 +719,9 @@ $(function() {
         else if (talkCount === 29) {
 
             // 風力発電所到着
+            $(".gameUpper").attr('id','gameUpperBack5');
+            $(".background").attr('id','gameUpperBack5')
+
 
             talkCount = 29;
 
@@ -906,6 +921,10 @@ $(function() {
 
             // 太陽光発電所到着
 
+            $(".gameUpper").attr('id','gameUpperBack6');
+            $(".background").attr('id','gameUpperBack6')
+
+
             talkCount = 34;
 
             $(".announcePlace").html('<h1>太陽光発電所</h1>');
@@ -1096,34 +1115,38 @@ $(function() {
 
         } else if (talkCount === 40) {
 
-           // 原子力発電所到着
+        // 原子力発電所到着
 
-           talkCount = 40;
+        $(".gameUpper").attr('id','gameUpperBack7');
+        $(".background").attr('id','gameUpperBack7')
 
-           $(".announcePlace").html('<h1>原子力発電所</h1>');
 
-           announcePlaceOn();
+        talkCount = 40;
 
-           setTimeout(function() {
+        $(".announcePlace").html('<h1>原子力発電所</h1>');
+
+        announcePlaceOn();
+
+        setTimeout(function() {
 
             announcePlaceOff();
 
             talkCount = 40;
- 
+
             let characterSelect = storyTalkerNomber[talkCount];
                 characterSelect = Number(characterSelect)
     
             if (characterSelect >= 0 & characterSelect <= 11) {
                 $("#talkerLeft").attr('src','./thirdPage/characterImage/character' + characterSelect + '.png')
             }
- 
+
     
             $(".talkerContentBox").html('<h4>' + storyTlaking[talkCount] + '</h4>')
             $(".talkerName").html('<h4>' + talkerCharacterName[characterSelect] + '</h4>')
- 
+
             talkCount = 41;
 
-           },2500)
+        },2500)
 
         }
 
@@ -1293,32 +1316,36 @@ $(function() {
 
             // 魔王の城到着
 
-           talkCount = 46;
+            $(".gameUpper").attr('id','gameUpperBack8');
+            $(".background").attr('id','gameUpperBack8')
 
-           $(".announcePlace").html('<h1>魔王の城</h1>');
 
-           announcePlaceOn();
+        talkCount = 46;
 
-           setTimeout(function() {
+        $(".announcePlace").html('<h1>魔王の城</h1>');
+
+        announcePlaceOn();
+
+        setTimeout(function() {
 
             announcePlaceOff();
 
             talkCount = 46;
- 
+
             let characterSelect = storyTalkerNomber[talkCount];
                 characterSelect = Number(characterSelect)
     
             if (characterSelect >= 0 & characterSelect <= 11) {
                 $("#talkerLeft").attr('src','./thirdPage/characterImage/character' + characterSelect + '.png')
             }
- 
+
     
             $(".talkerContentBox").html('<h4>' + storyTlaking[talkCount] + '</h4>')
             $(".talkerName").html('<h4>' + talkerCharacterName[characterSelect] + '</h4>')
- 
+
             talkCount = 47;
 
-           },2500)
+        },2500)
 
         }
 
@@ -1490,6 +1517,12 @@ $(function() {
 
         }
 
+
+        else if (talkCount === 51) {
+            $(".gameUpper").attr('id','gameUpperBack9');
+            $(".background").attr('id','gameUpperBack9')
+        }
+        
         
         
         else if (talkCount <= 52) {
