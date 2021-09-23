@@ -1,4 +1,6 @@
 $(window).on('load', function() {
+
+    
     let windowWidth = $(window).width();
     let windowHeight = $(window).height();
 
@@ -264,6 +266,8 @@ $(window).on('load', function() {
 
     let questionStage = '';
 
+    let checkAnnounce = 0;
+
 
     // アタックボタンのIDを取得
     const attackButtonId = document.getElementById('inputAnswer');
@@ -286,8 +290,9 @@ $(window).on('load', function() {
 
         console.log(talkCount)
 
-        if (talkCount === 6) {
+        if (talkCount === 6 && checkAnnounce === 0) {
 
+            checkAnnounce = 100;
 
             // 発電所到着
 
@@ -315,6 +320,8 @@ $(window).on('load', function() {
 
                 talkCount = 7;
 
+                checkAnnounce = 0;
+
             },2500)
 
 
@@ -325,9 +332,11 @@ $(window).on('load', function() {
         
         
         
-        else if (talkCount === 14) {
+        else if (talkCount === 14 && checkAnnounce === 0) {
 
             // 火力発電所到着
+
+            checkAnnounce = 100;
 
             $(".gameUpper").attr('id','gameUpperBack3');
             $(".background").attr('id','gameUpperBack3')
@@ -359,18 +368,21 @@ $(window).on('load', function() {
 
                 talkCount = 15;
 
+                checkAnnounce = 0;
+
             },2500)
 
         } 
         
         
         
-        else if (talkCount === 17) {
+        else if (talkCount === 17 && checkAnnounce === 0) {
 
             attackButtonId.value= '';
 
             // 第一回戦開始
-
+            checkAnnounce = 100;
+            
             talkCount = 17;
 
             let checkStage = 'stage1'
@@ -426,6 +438,8 @@ $(window).on('load', function() {
                 $(".questionBox").css({
                     height: downContentHeight
                 })
+
+                checkAnnounce = 0;
 
             },2500)
 
@@ -518,9 +532,12 @@ $(window).on('load', function() {
         
         
         
-        else if (talkCount === 21) {
+        else if (talkCount === 21 && checkAnnounce === 0) {
 
             // 水力発電所到着
+            checkAnnounce = 100;
+
+
             $(".gameUpper").attr('id','gameUpperBack4');
             $(".background").attr('id','gameUpperBack4')
 
@@ -549,6 +566,8 @@ $(window).on('load', function() {
 
                 talkCount = 22;
 
+                checkAnnounce = 0;
+
             },2500)
 
         } 
@@ -556,9 +575,11 @@ $(window).on('load', function() {
         
         
         
-        else if (talkCount === 25) {
+        else if (talkCount === 25 && checkAnnounce === 0) {
 
             // 第二回戦開始
+
+            checkAnnounce = 100;
 
             talkCount = 25;
             
@@ -616,6 +637,8 @@ $(window).on('load', function() {
                 $(".questionBox").css({
                     height: downContentHeight
                 })
+
+                checkAnnounce = 0;
 
             },2500)
 
@@ -714,11 +737,12 @@ $(window).on('load', function() {
         } 
         
         
-        
-        
-        else if (talkCount === 29) {
+        else if (talkCount === 29 && checkAnnounce === 0) {
 
             // 風力発電所到着
+
+            checkAnnounce = 100;
+
             $(".gameUpper").attr('id','gameUpperBack5');
             $(".background").attr('id','gameUpperBack5')
 
@@ -748,6 +772,8 @@ $(window).on('load', function() {
 
                 talkCount = 30;
 
+                checkAnnounce = 0;
+
             },2500)
 
         } 
@@ -756,9 +782,12 @@ $(window).on('load', function() {
         
         
         
-        else if (talkCount === 31) {
+        else if (talkCount === 31 && checkAnnounce === 0) {
 
             // 第三回戦 開始！！
+
+            checkAnnounce = 100;
+
 
             talkCount = 31;
 
@@ -815,6 +844,9 @@ $(window).on('load', function() {
                 $(".questionBox").css({
                     height: downContentHeight
                 })
+
+                checkAnnounce = 0;
+
 
             },2500)
 
@@ -917,9 +949,12 @@ $(window).on('load', function() {
         
         
         
-        else if (talkCount === 34) {
+        else if (talkCount === 34 && checkAnnounce === 0) {
 
             // 太陽光発電所到着
+
+
+            checkAnnounce = 100;
 
             $(".gameUpper").attr('id','gameUpperBack6');
             $(".background").attr('id','gameUpperBack6')
@@ -950,15 +985,19 @@ $(window).on('load', function() {
 
                 talkCount = 35;
 
+                checkAnnounce = 0;
+
             },2500)
 
         }
 
 
 
-        else if (talkCount === 36) {
+        else if (talkCount === 36 && checkAnnounce === 0) {
 
         // 第4回戦 開始！！
+
+        checkAnnounce = 100;
 
         talkCount = 36;
 
@@ -1014,6 +1053,8 @@ $(window).on('load', function() {
             $(".questionBox").css({
                 height: downContentHeight
             })
+
+            checkAnnounce = 0;
 
         },2500)
 
@@ -1114,9 +1155,11 @@ $(window).on('load', function() {
 
         
 
-        } else if (talkCount === 40) {
+        } else if (talkCount === 40 && checkAnnounce === 0) {
 
         // 原子力発電所到着
+
+        checkAnnounce = 100;
 
         $(".gameUpper").attr('id','gameUpperBack7');
         $(".background").attr('id','gameUpperBack7')
@@ -1147,17 +1190,21 @@ $(window).on('load', function() {
 
             talkCount = 41;
 
+            checkAnnounce = 0;
+
         },2500)
 
         }
 
 
 
-        else if (talkCount === 42) {
+        else if (talkCount === 42 && checkAnnounce === 0) {
 
             // 第五開戦開始
 
             talkCount = 42;
+
+            checkAnnounce = 100;
 
             $(".announcePlace").html('<h1>戦闘開始</h1>');
 
@@ -1211,6 +1258,8 @@ $(window).on('load', function() {
                 $(".questionBox").css({
                     height: downContentHeight
                 })
+
+                checkAnnounce = 0;
 
             },2500)
 
@@ -1314,7 +1363,9 @@ $(window).on('load', function() {
 
 
 
-        else if (talkCount === 46) {
+        else if (talkCount === 46 && checkAnnounce === 0) {
+
+            checkAnnounce = 100;
 
             // 魔王の城到着
 
@@ -1347,13 +1398,17 @@ $(window).on('load', function() {
 
             talkCount = 47;
 
+            checkAnnounce = 0;
+
         },2500)
 
         }
 
 
 
-        else if (talkCount == 49) {
+        else if (talkCount == 49 && checkAnnounce === 0) {
+
+            checkAnnounce = 100;
 
             talkCount = 49;
 
@@ -1391,6 +1446,7 @@ $(window).on('load', function() {
 
                 questionStage = 6;
 
+                checkAnnounce = 0;
 
             },2500)
 
@@ -1480,7 +1536,7 @@ $(window).on('load', function() {
             
                         $(".talkerContentBox").html('<h4>' + storyTlaking[talkCount] + '</h4>')
                         $(".talkerName").html('<h4>' + talkerCharacterName[characterSelect] + '</h4>')
-                        talkCount += 1;
+                        talkCount = 51;
 
                         
                         attackButtonId.value= '';
@@ -1519,17 +1575,16 @@ $(window).on('load', function() {
             })
 
         }
-
-
-        else if (talkCount === 51) {
-            
-            $(".gameUpper").attr('id','gameUpperBack9');
-            $(".background").attr('id','gameUpperBack9')
-        }
         
         
         
         else if (talkCount <= 52) {
+
+            if (talkCount === 51) {
+                $(".gameUpper").attr('id','gameUpperBack9');
+                $(".background").attr('id','gameUpperBack9')
+            }
+
             let characterSelect = storyTalkerNomber[talkCount];
             characterSelect = Number(characterSelect)
 
@@ -1542,8 +1597,8 @@ $(window).on('load', function() {
 
             $(".talkerContentBox").html('<h4>' + storyTlaking[talkCount] + '</h4>')
             $(".talkerName").html('<h4>' + talkerCharacterName[characterSelect] + '</h4>')
+            
             talkCount += 1;
-
 
         }
         
@@ -1636,4 +1691,10 @@ $(window).on('load', function() {
 
     })
 
+
+    // ウィンドウを再び表示させても前と同じ状態にさせる
+
+    $(window).on('beforeunload', function() {
+
+    })
 });
