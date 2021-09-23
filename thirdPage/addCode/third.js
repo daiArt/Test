@@ -1,4 +1,4 @@
-$(function() {
+$(window).on('load', function() {
 
     let windowWidth = $(window).width();
     let windowHeight = $(window).height();
@@ -8,7 +8,7 @@ $(function() {
 
     localStorage.setItem('proNGWindowWidht' , windowWidth)
     localStorage.setItem('proNGWindowHeight' , windowWidth)
-    
+
     let pageWidht = windowHeight * 0.75;
 
             
@@ -17,32 +17,32 @@ $(function() {
         height: windowHeight
     })
 
-    
+
     $(".background").css({
         width: windowWidth,
         height: windowHeight
     })
-    
+
     $(".talkHeader").css({
         width: pageWidht,
     })
-    
-    
+
+
     let topScreanHiehgt = pageWidht / 1.75;
     let downScreanHeight = windowHeight - topScreanHiehgt;
-    
+
     $(".gameUpper").css({
         height: topScreanHiehgt
     })
-    
+
     let pageLeftStart = (windowWidth- pageWidht) / 2;
-    
+
     $(".announcePlace").css({
         height: topScreanHiehgt,
         width: pageWidht - 10,
         left: pageLeftStart + 5
     })
-    
+
     $(".answerCommentary").css({
         width: pageWidht,
         height: windowHeight,
@@ -68,19 +68,19 @@ $(function() {
     $(".gameDowner").css({
         height: downScreanHeight
     })
-    
+
     $(".downerContent").css({
         height: downScreanHeight * 0.8
     })
-    
+
     $(".downerContent > div").css({
         height: downScreanHeight * 0.8
     })
-    
+
     $(".wr-downerContent").css({
         height: downScreanHeight * 0.8
     })
-    
+
     let getQuestionTextHeight = $(".questionText").height();
     let downContentHeight = downScreanHeight * 0.8  - 35 - getQuestionTextHeight
     $(".questionBox").css({
@@ -305,12 +305,12 @@ $(function() {
 
                 let characterSelect = storyTalkerNomber[talkCount];
                 characterSelect = Number(characterSelect)
-    
+
                 if (characterSelect >= 0 & characterSelect <= 11) {
                     $("#talkerLeft").attr('src','./thirdPage/characterImage/character' + characterSelect + '.png')
                 }
 
-    
+
                 $(".talkerContentBox").html('<h4>' + storyTlaking[talkCount] + '</h4>')
                 $(".talkerName").html('<h4>' + talkerCharacterName[characterSelect] + '</h4>')
 
@@ -349,12 +349,12 @@ $(function() {
 
                 let characterSelect = storyTalkerNomber[talkCount];
                 characterSelect = Number(characterSelect)
-    
+
                 if (characterSelect >= 0 & characterSelect <= 11) {
                     $("#talkerLeft").attr('src','./thirdPage/characterImage/character' + characterSelect + '.png')
                 }
 
-    
+
                 $(".talkerContentBox").html('<h4>' + storyTlaking[talkCount] + '</h4>')
                 $(".talkerName").html('<h4>' + talkerCharacterName[characterSelect] + '</h4>')
 
@@ -387,12 +387,12 @@ $(function() {
 
                 let characterSelect = storyTalkerNomber[talkCount];
                 characterSelect = Number(characterSelect)
-    
+
                 if (characterSelect >= 0 & characterSelect <= 11) {
                     $("#talkerLeft").attr('src','./thirdPage/characterImage/character' + characterSelect + '.png')
                 }
 
-    
+
                 $(".talkerContentBox").html('<h4>' + storyTlaking[talkCount] + '</h4>')
                 $(".talkerName").html('<h4>' + talkerCharacterName[characterSelect] + '</h4>')
                 $(".downerContent").css({
@@ -446,7 +446,7 @@ $(function() {
                     $(".answerCommentary").css({
                         display: 'flex'
                     })
-    
+
                     $(".questionTrue").css({
                         display: 'block',
                     })
@@ -465,9 +465,9 @@ $(function() {
                             display: 'none'
                         })
 
-    
+
                         talkCount = 18;
-    
+
                         let characterSelect = storyTalkerNomber[talkCount];
                         characterSelect = Number(characterSelect)
             
@@ -539,12 +539,12 @@ $(function() {
 
                 let characterSelect = storyTalkerNomber[talkCount];
                 characterSelect = Number(characterSelect)
-    
+
                 if (characterSelect >= 0 & characterSelect <= 11) {
                     $("#talkerLeft").attr('src','./thirdPage/characterImage/character' + characterSelect + '.png')
                 }
 
-    
+
                 $(".talkerContentBox").html('<h4>' + storyTlaking[talkCount] + '</h4>')
                 $(".talkerName").html('<h4>' + talkerCharacterName[characterSelect] + '</h4>')
 
@@ -576,12 +576,12 @@ $(function() {
 
                 let characterSelect = storyTalkerNomber[talkCount];
                 characterSelect = Number(characterSelect)
-    
+
                 if (characterSelect >= 0 & characterSelect <= 11) {
                     $("#talkerLeft").attr('src','./thirdPage/characterImage/character' + characterSelect + '.png')
                 }
 
-    
+
                 $(".talkerContentBox").html('<h4>' + storyTlaking[talkCount] + '</h4>')
                 $(".talkerName").html('<h4>' + talkerCharacterName[characterSelect] + '</h4>')
                 $(".downerContent").css({
@@ -640,7 +640,7 @@ $(function() {
                     $(".answerCommentary").css({
                         display: 'flex'
                     })
-    
+
                     $(".questionTrue").css({
                         display: 'block',
                     })
@@ -659,9 +659,9 @@ $(function() {
                             display: 'none'
                         })
 
-    
+
                         talkCount = 26;
-    
+
                         let characterSelect = storyTalkerNomber[talkCount];
                         characterSelect = Number(characterSelect)
             
@@ -738,12 +738,12 @@ $(function() {
 
                 let characterSelect = storyTalkerNomber[talkCount];
                 characterSelect = Number(characterSelect)
-    
+
                 if (characterSelect >= 0 & characterSelect <= 11) {
                     $("#talkerLeft").attr('src','./thirdPage/characterImage/character' + characterSelect + '.png')
                 }
 
-    
+
                 $(".talkerContentBox").html('<h4>' + storyTlaking[talkCount] + '</h4>')
                 $(".talkerName").html('<h4>' + talkerCharacterName[characterSelect] + '</h4>')
 
@@ -774,12 +774,12 @@ $(function() {
 
                 let characterSelect = storyTalkerNomber[talkCount];
                 characterSelect = Number(characterSelect)
-    
+
                 if (characterSelect >= 0 & characterSelect <= 11) {
                     $("#talkerLeft").attr('src','./thirdPage/characterImage/character' + characterSelect + '.png')
                 }
 
-    
+
                 $(".talkerContentBox").html('<h4>' + storyTlaking[talkCount] + '</h4>')
                 $(".talkerName").html('<h4>' + talkerCharacterName[characterSelect] + '</h4>')
                 $(".downerContent").css({
@@ -839,14 +839,14 @@ $(function() {
                     $(".answerCommentary").css({
                         display: 'flex'
                     })
-    
+
                     $(".questionTrue").css({
                         display: 'block',
                     })
 
                     $(".nextTalkCount").click(function() {
                         $(".questionTrue").scrollTop(0);
-    
+
                         $(".commentaryText").scrollTop(0);
 
                         $(".answerCommentary").css({
@@ -861,9 +861,9 @@ $(function() {
                             display: 'none'
                         })
 
-    
+
                         talkCount = 32;
-    
+
                         let characterSelect = storyTalkerNomber[talkCount];
                         characterSelect = Number(characterSelect)
             
@@ -940,12 +940,12 @@ $(function() {
 
                 let characterSelect = storyTalkerNomber[talkCount];
                 characterSelect = Number(characterSelect)
-    
+
                 if (characterSelect >= 0 & characterSelect <= 11) {
                     $("#talkerLeft").attr('src','./thirdPage/characterImage/character' + characterSelect + '.png')
                 }
 
-    
+
                 $(".talkerContentBox").html('<h4>' + storyTlaking[talkCount] + '</h4>')
                 $(".talkerName").html('<h4>' + talkerCharacterName[characterSelect] + '</h4>')
 
@@ -1137,12 +1137,12 @@ $(function() {
 
             let characterSelect = storyTalkerNomber[talkCount];
                 characterSelect = Number(characterSelect)
-    
+
             if (characterSelect >= 0 & characterSelect <= 11) {
                 $("#talkerLeft").attr('src','./thirdPage/characterImage/character' + characterSelect + '.png')
             }
 
-    
+
             $(".talkerContentBox").html('<h4>' + storyTlaking[talkCount] + '</h4>')
             $(".talkerName").html('<h4>' + talkerCharacterName[characterSelect] + '</h4>')
 
@@ -1161,22 +1161,22 @@ $(function() {
             talkCount = 42;
 
             $(".announcePlace").html('<h1>戦闘開始</h1>');
-    
+
             announcePlaceOn();
-    
+
             setTimeout(function() {
                 announcePlaceOff();
-    
+
                 talkCount = 42;
-    
+
                 let characterSelect = storyTalkerNomber[talkCount];
                 characterSelect = Number(characterSelect)
-    
+
                 if (characterSelect >= 0 & characterSelect <= 11) {
                     $("#talkerLeft").attr('src','./thirdPage/characterImage/character' + characterSelect + '.png')
                 }
-    
-    
+
+
                 $(".talkerContentBox").html('<h4>' + storyTlaking[talkCount] + '</h4>')
                 $(".talkerName").html('<h4>' + talkerCharacterName[characterSelect] + '</h4>')
                 $(".downerContent").css({
@@ -1185,19 +1185,19 @@ $(function() {
                 $(".questionSpace").css({
                     display: 'block'
                 })
-    
+
                 // 問題の部分
-    
+
                 $(".questionText > h2").html(
                     'Q. 謎を解いて技を発動しろ！！'
                 )
-    
+
                 $(".questionText > p").html(
                     '書き順通りによめ (※10文字目には伸ばし棒が入ります)'
                 )
-    
+
                 $(".questionImage > img").attr('src','./thirdPage/questionBox/5.png')
-    
+
                 $(".answerBox > h2").html(
                     'A. ?????????-???'
                 )
@@ -1206,19 +1206,19 @@ $(function() {
 
                 questionStage = 5;
 
-    
+
                 let getQuestionTextHeight = $(".questionText").height();
                 let downContentHeight = downScreanHeight * 0.8  - 35 - getQuestionTextHeight
                 $(".questionBox").css({
                     height: downContentHeight
                 })
-    
+
             },2500)
-    
+
             $(".attackButton").click(function() {
-    
+
                 let answerStorage = attackButtonId.value;
-    
+
                 if (answerStorage === 'ニュークエクスプローション') {
 
 
@@ -1236,7 +1236,7 @@ $(function() {
                     $(".answerCommentary").css({
                         display: 'flex'
                     })
-    
+
                     $(".questionTrue").css({
                         display: 'block',
                     })
@@ -1259,9 +1259,9 @@ $(function() {
                             display: 'none'
                         })
 
-    
+
                         talkCount = 43;
-    
+
                         let characterSelect = storyTalkerNomber[talkCount];
                         characterSelect = Number(characterSelect)
             
@@ -1308,7 +1308,7 @@ $(function() {
                     })
 
                 }
-    
+
             })
 
         }
@@ -1337,12 +1337,12 @@ $(function() {
 
             let characterSelect = storyTalkerNomber[talkCount];
                 characterSelect = Number(characterSelect)
-    
+
             if (characterSelect >= 0 & characterSelect <= 11) {
                 $("#talkerLeft").attr('src','./thirdPage/characterImage/character' + characterSelect + '.png')
             }
 
-    
+
             $(".talkerContentBox").html('<h4>' + storyTlaking[talkCount] + '</h4>')
             $(".talkerName").html('<h4>' + talkerCharacterName[characterSelect] + '</h4>')
 
@@ -1364,23 +1364,23 @@ $(function() {
 
             setTimeout(function() {
                 announcePlaceOff();
-    
+
                 talkCount = 49;
-    
+
                 let characterSelect = storyTalkerNomber[talkCount];
                 characterSelect = Number(characterSelect)
-    
+
                 if (characterSelect >= 0 & characterSelect <= 11) {
                     $("#talkerLeft").attr('src','./thirdPage/characterImage/character' + characterSelect + '.png')
                 }
-    
-    
+
+
                 $(".talkerContentBox").html('<h4>' + storyTlaking[talkCount] + '</h4>')
                 $(".talkerName").html('<h4>' + talkerCharacterName[characterSelect] + '</h4>')
                 $(".downerContent").css({
                     display: 'block'
                 })
-    
+
                 // 問題の部分
 
                 $(".lastQuestion").css({
@@ -1392,7 +1392,7 @@ $(function() {
 
                 questionStage = 6;
 
-    
+
             },2500)
 
 
@@ -1447,7 +1447,7 @@ $(function() {
                     $(".answerCommentary").css({
                         display: 'flex'
                     })
-    
+
                     $(".questionTrue").css({
                         display: 'block',
                     })
@@ -1466,9 +1466,9 @@ $(function() {
                             display: 'none'
                         })
 
-    
+
                         talkCount = 50;
-    
+
                         let characterSelect = storyTalkerNomber[talkCount];
                         characterSelect = Number(characterSelect)
             
@@ -1612,7 +1612,7 @@ $(function() {
             $(".viewHintBox").css({
                 display: 'none'
             })
-    
+
             $(".checkViewHint").css({
                 display: 'none'
             })
@@ -1628,7 +1628,7 @@ $(function() {
             $(".questionElse").css({
                 display: 'block'
             })
-    
+
             $(".viewHintBox").css({
                 display: 'none'
             })
@@ -1637,5 +1637,4 @@ $(function() {
 
     })
 
-
-})
+});
