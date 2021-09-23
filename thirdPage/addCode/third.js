@@ -39,9 +39,8 @@ $(function() {
     
     $(".announcePlace").css({
         height: topScreanHiehgt,
-        width: pageWidht,
-        top: 0,
-        left: pageLeftStart
+        width: pageWidht - 10,
+        left: pageLeftStart + 5
     })
     
     $(".answerCommentary").css({
@@ -684,6 +683,8 @@ $(function() {
                 } else {
 
 
+                    $(".questionTrue").css({display: 'none'})
+
                     $(".answerCommentary").css({
                         display: 'flex'
                     })
@@ -1083,6 +1084,7 @@ $(function() {
 
             } else {
 
+                $(".questionTrue").css({display: 'none'})
 
                 $(".answerCommentary").css({
                     display: 'flex'
@@ -1280,6 +1282,7 @@ $(function() {
 
                 } else {
 
+                    $(".questionTrue").css({display: 'none'})
 
                     $(".answerCommentary").css({
                         display: 'flex'
@@ -1487,6 +1490,7 @@ $(function() {
 
                 } else {
 
+                    $(".questionTrue").css({display: 'none'})
 
                     $(".answerCommentary").css({
                         display: 'flex'
@@ -1519,6 +1523,7 @@ $(function() {
 
 
         else if (talkCount === 51) {
+            
             $(".gameUpper").attr('id','gameUpperBack9');
             $(".background").attr('id','gameUpperBack9')
         }
